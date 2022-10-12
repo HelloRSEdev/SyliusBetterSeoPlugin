@@ -1,5 +1,5 @@
 {
-    "name": "joppedc/sylius-better-seo-plugin",
+    "name": "joppedc/sylius-better-seo-plugin-hellorse",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Support for SEO metadata on products",

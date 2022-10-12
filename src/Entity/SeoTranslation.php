@@ -54,6 +54,78 @@ class SeoTranslation extends AbstractTranslation implements ResourceInterface, S
      */
     private $extraTags;
 
+    /**
+     * @var bool|null
+     * 
+     */
+    protected $autoTwitterDescription;
+
+    /**
+     * @var bool|null
+     * 
+     */
+    protected $autoTwitterTitle;
+
+    /**
+     * @var bool|null
+     * 
+     */
+    protected $autoOpengraphDescription;
+
+    /**
+     * @var bool|null
+     * 
+     */
+    protected $autoOpengraphTitle;
+
+    public function isAutoTwitterDescription(): ?bool
+    {
+        return $this->autoTwitterDescription;
+    }
+
+    public function setAutoTwitterDescription(?bool $autoTwitterDescription): self
+    {
+        $this->autoTwitterDescription = $autoTwitterDescription;
+
+        return $this;
+    }
+
+    public function isAutoTwitterTitle(): ?bool
+    {
+        return $this->autoTwitterTitle;
+    }
+
+    public function setAutoTwitterTitle(?bool $autoTwitterTitle): self
+    {
+        $this->autoTwitterTitle = $autoTwitterTitle;
+
+        return $this;
+    }
+
+    public function isAutoOpengraphDescription(): ?bool
+    {
+        return $this->autoOpengraphDescription;
+    }
+
+    public function setAutoOpengraphDescription(?bool $autoOpengraphDescription): self
+    {
+        $this->autoOpengraphDescription = $autoOpengraphDescription;
+
+        return $this;
+    }
+
+    public function isAutoOpengraphTitle(): ?bool
+    {
+        return $this->autoOpengraphTitle;
+    }
+
+    public function setAutoOpengraphTitle(?bool $autoOpengraphTitle): self
+    {
+        $this->autoOpengraphTitle = $autoOpengraphTitle;
+
+        return $this;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

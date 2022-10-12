@@ -1,5 +1,5 @@
 {
-    "name": "sylius-better-seo-plugin-hellorse",
+    "name": "hellorse/sylius-better-seo-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Support for SEO metadata on products",

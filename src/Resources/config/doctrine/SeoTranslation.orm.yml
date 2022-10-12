@@ -55,3 +55,19 @@ JoppeDc\SyliusBetterSeoPlugin\Entity\SeoTranslation:
             nullable: true
             options:
                 default: ''
+        autoTwitterDescription:
+            column: auto_twitter_description
+            type: boolean
+            nullable: true
+        autoTwitterTitle:
+            column: auto_twitter_title
+            type: boolean
+            nullable: true
+        autoOpengraphDescription:
+            column: auto_opengraph_description
+            type: boolean
+            nullable: true
+        autoOpengraphTitle:
+            column: auto_opengraph_title
+            type: boolean
+            nullable: true

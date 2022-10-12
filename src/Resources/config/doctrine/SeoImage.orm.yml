@@ -3,7 +3,7 @@ JoppeDc\SyliusBetterSeoPlugin\Entity\SeoImage:
     table: joppedc_seo_image
     oneToOne:
         owner:
-            targetEntity: App\Entity\Seo\SeoTranslation
+            targetEntity: JoppeDc\SyliusBetterSeoPlugin\Entity\SeoTranslation
             inversedBy: image
             cascade: [ALL]
             joinColumn:

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace JoppeDc\SyliusBetterSeoPlugin\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Sylius\Component\Resource\Model\TranslatableInterface;
@@ -30,6 +31,21 @@ class Seo implements TranslatableInterface, ResourceInterface, SeoInterface
     public function __toString()
     {
         return (string) $this->getId();
+    }
+    
+    public function __clone()
+    {
+        $translations = new ArrayCollection();
+        /** @var SeoTranslation $item */
+        foreach ($this->translations as $item) {
+            $itemClone = clone $item;
+            $itemClone->setTranslatable($this);
+            $translations->add($itemClone);
+        }
+
+        $this->translations = $translations;
+        $this->translationsCache = $translations->toArray();
+
     }
 
     public function getPageTitle(): ?string
